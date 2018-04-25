@@ -1,0 +1,44 @@
+<mat-card>
+  <form (ngSubmit)="submitEmployee()">
+    <mat-card-title>
+      Create New Employee
+    </mat-card-title>
+
+    <mat-card-content>
+        <mat-form-field>
+          <input type="text" matInput name="empNo"
+            placeholder="Enter Emp No" 
+            [(ngModel)]="employee.empNo" />
+        </mat-form-field>
+
+        <br>
+        <mat-form-field>
+          <input type="text" matInput name="firstName"
+            placeholder="Enter First Name" 
+            [(ngModel)]="employee.firstName" />
+        </mat-form-field>
+        <br>
+
+        <mat-form-field>
+          <input type="text" matInput name="lastName"
+            placeholder="Enter Last Name" 
+            [(ngModel)]="employee.lastName" />
+        </mat-form-field>
+        <br>
+
+        <mat-form-field>
+          <input type="text" matInput name="city"
+            placeholder="Enter City"
+            [(ngModel)]="employee.city" />
+        </mat-form-field>
+        <br>
+
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button mat-raised-button color="accent">
+        Create New Employee
+      </button>
+    </mat-card-actions>
+  </form>
+</mat-card>
