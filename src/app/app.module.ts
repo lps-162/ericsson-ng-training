@@ -10,7 +10,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, 
          MatToolbarModule, 
          MatCardModule, 
-         MatInputModule } from '@angular/material';
+         MatInputModule, 
+         MatSidenavModule,
+         MatListModule} from '@angular/material';
 import { MatIconModule } from '@angular/material';
 import { TableModule } from 'primeng/table';
 
@@ -41,7 +43,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
     MatButtonModule,
     MatIconModule,
     MatToolbarModule,
-
+    MatSidenavModule,
+    MatListModule,
+    
     TableModule,
     FlexLayoutModule,
 
