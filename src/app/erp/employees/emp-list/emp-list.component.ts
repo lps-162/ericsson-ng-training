@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Employee } from '../../../shared/models/employee';
 import { mockEmployees } from '../../../shared/mock-data/mock-employees';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-emp-list',
@@ -12,8 +13,11 @@ export class EmpListComponent implements OnInit {
 
   employees: Employee[];
   selectedEmployee: Employee;
+  routerLinkArray = ['/employees', 'create'];
 
-  constructor() { }
+  constructor(private router: Router) { 
+
+  }
 
   ngOnInit() {
     this.cols = [
@@ -31,5 +35,11 @@ export class EmpListComponent implements OnInit {
   handleEmpCreation(newEmp: Employee) {
     console.log('I am in the parent, event emitted');
     this.employees.push(newEmp);
+  }
+
+  onRowSelect(eventInfo) {
+    const emp = eventInfo.data;
+    const routerLinkArr = ['/employees', emp.id]
+    this.router.navigate(routerLinkArr);
   }
 }

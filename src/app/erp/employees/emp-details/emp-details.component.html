@@ -1,4 +1,11 @@
-Emp Details
+<a routerLink="/employees">
+  Go Back to Employees
+</a>
+
+<button mat-raised-button (click)="goBack()" color="accent">
+  Go Back Using Button
+</button>
+
 <mat-card *ngIf="employee">
   <mat-card-title>
     Employee Details
